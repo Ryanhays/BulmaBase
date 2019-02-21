@@ -132,6 +132,12 @@ function bulmabase_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bulmabase_scripts' );
 
+
+
+wp_enqueue_style( 'bulmabase-main-minified', get_template_directory_uri() . '/css/bulma.css',false,'1.1','all');
+
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -158,4 +164,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
