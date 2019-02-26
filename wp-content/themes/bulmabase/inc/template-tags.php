@@ -26,7 +26,7 @@ if ( ! function_exists( 'bulmabase_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'bulmabase' ),
+			esc_html_x( 'Posted : %s', 'post date', 'bulmabase' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -62,14 +62,14 @@ if ( ! function_exists( 'bulmabase_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'bulmabase' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bulmabase' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Cateogries : %1$s', 'bulmabase' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'bulmabase' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ',', 'list item separator', 'bulmabase' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bulmabase' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged', 'bulmabase' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 

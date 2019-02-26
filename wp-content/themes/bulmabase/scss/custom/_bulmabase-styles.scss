@@ -1,0 +1,128 @@
+// Bulma Base Styles - Rules that make Bulma play nicely with Wordpress, but original Bulma files can be easily disabled or updated.
+
+// Basic Content
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+  &.sticky {
+    border: 1px solid $primary;
+    border-radius: 3px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .cat-links {
+    a {
+      margin-right:0.5em;
+    }
+  }
+  .entry-content {
+    img {
+      max-width: 100%;
+    }
+    figure {
+      max-width: 100% !important;
+      margin-left: 0;
+      margin-right: 0;
+      .wp-caption-text {
+        text-align: left;
+        font-size:0.8rem;
+      }
+      img {
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+// Post Styles
+.single {
+  .post {
+    .entry-meta {
+      .updated {
+        display: none;
+      }
+      .cat-links {
+        a {
+          margin-right: 0;
+        }
+      }
+    &:last-of-type {
+      margin-bottom:1rem;
+    }
+    }
+  }
+}
+
+//Sidebar
+#sidebar {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .widget-area {
+    position: relative;
+    top:-12px;
+    .widget {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+}
+
+//Comments
+
+.comments-area {
+  margin-top:4rem;
+  .comment-list {
+    list-style: none;
+    .comment {
+      margin-top:1rem;
+      .comment-author.vcard {
+        .fn {
+          font-size:1.25rem;
+          vertical-align: text-bottom;
+          margin-left:0.25rem;
+          top:-5px;
+          position: relative;
+        }
+        .says {
+          display: none;
+        }
+      }
+      .comment-metadata {font-size: 0.85rem; margin:0rem 2.6rem 0.5rem;}
+      .comment-body {
+        margin:1.5rem 0;
+      }
+      .comment-content {
+        margin:0.5rem 2.6rem;
+        p {
+          margin-bottom:0.5rem;
+        }
+      }
+      .reply {
+         margin:1rem 2.6rem;
+      }
+
+      img.avatar {
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+
+// Footer {
+footer {
+  .menu {
+    ul {
+      list-style: none;
+      margin-left:0 !important;
+      padding-left:0 !important;
+    }
+  }
+}

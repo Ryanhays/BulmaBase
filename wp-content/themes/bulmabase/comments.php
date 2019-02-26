@@ -26,21 +26,21 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title subtitle">
 			<?php
 			$bulmabase_comment_count = get_comments_number();
 			if ( '1' === $bulmabase_comment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'bulmabase' ),
-					'<span>' . get_the_title() . '</span>'
+					'<span class="subtitle">' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $bulmabase_comment_count, 'comments title', 'bulmabase' ) ),
 					number_format_i18n( $bulmabase_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					'<span class="subtitle">' . get_the_title() . '</span>'
 				);
 			}
 			?>
@@ -69,7 +69,8 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
 	?>
+
+	<?php get_template_part( 'template-parts/comment-form', get_post_format() ); ?>
 
 </div><!-- #comments -->
