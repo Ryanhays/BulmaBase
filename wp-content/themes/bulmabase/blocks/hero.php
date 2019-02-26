@@ -11,7 +11,7 @@
   <div class="hero-body">
     <div class="container">
 			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title title">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="entry-title title is-size-2">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
       <!-- <h2 class="subtitle">
         Primary bold subtitle

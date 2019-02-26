@@ -20,7 +20,11 @@ section {
       margin-right:0.5em;
     }
   }
-  .entry-content {
+  .entry-content, .comment-content {
+    pre {
+      border-radius:0.25rem;
+      margin:1rem 0rem;
+    }
     img {
       max-width: 100%;
     }
@@ -112,6 +116,10 @@ section {
         border-radius: 2px;
       }
     }
+  }
+  .children {
+    list-style: none;
+    margin-left:2.6rem;
   }
 }
 

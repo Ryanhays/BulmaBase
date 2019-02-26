@@ -22,7 +22,7 @@
       }
       ?>
       <?php if ( 'div' != $args['style'] ) : ?>
-      <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+      <div id="div-comment-<?php comment_ID() ?>" class="comment-body content">
  	    <?php endif; ?>
 
  			 <article class="media">
