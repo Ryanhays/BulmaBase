@@ -1,6 +1,16 @@
 // Bulma Base Styles - Rules that make Bulma play nicely with Wordpress, but original Bulma files can be easily disabled or updated.
 
 // Basic Content
+
+html.menuopen {
+  overflow:hidden !important;
+}
+
+#content.fixed-nav {
+  position: relative;
+  top:52px;
+}
+
 article,
 aside,
 figure,
@@ -133,4 +143,12 @@ footer {
       padding-left:0 !important;
     }
   }
+}
+
+
+// Touch / Mobile Fixes
+@include touch {
+
+  // Removes size glitch caused by column gap on mobile
+  .columns.is-variable.is-8 {--columnGap: 0rem !important;}
 }

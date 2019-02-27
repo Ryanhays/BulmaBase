@@ -41,17 +41,17 @@
   span {
     background-color: currentColor;
     display: block;
-    height: 1px;
+    height: 2px;
     left: calc(50% - 8px);
     position: absolute;
     transform-origin: center;
     transition-duration: $speed;
     transition-property: background-color, opacity, transform;
     transition-timing-function: $easing;
-    width: 16px;
+    width: 20px;
 
     &:nth-child(1) {
-      top: calc(50% - 6px);
+      top: calc(50% - 7px);
     }
 
     &:nth-child(2) {
@@ -59,7 +59,7 @@
     }
 
     &:nth-child(3) {
-      top: calc(50% + 4px);
+      top: calc(50% + 5px);
     }
   }
 
